@@ -1,0 +1,140 @@
+#coding=utf8
+# 表示全文指定utf-8编码执行
+if True:
+    print('Answer')
+    print('True')
+else:
+    print('question')
+
+total = ('A','B')
+print(total[0])
+string = """nihao .hrllp.total
+sfjdsh"""
+# print(string)
+# print(string[2:7])
+print((string+'\n')*2)
+
+
+# python中数字有四种类型：整数、布尔型、浮点数和复数。
+# int (整数), 如 1, 只有一种整数类型 int，表示为长整型，没有 python2 中的 Long。
+# bool (布尔),如 true。
+# float (浮点数), 如 1.23、3E-2
+# complex (复数), 如 1 + 2j、 1.1 + 2.2j
+counter = 100
+print(counter)
+a= b = c =1
+print(b)
+
+# Python3 中有六个标准的数据类型：
+# Number（数字）
+# String（字符串）
+# List（列表）[]
+# Tuple（元组）()
+# Sets（集合）
+# Dictionary（字典）
+print(type(b)) #type()查询变量对象类型
+
+print(isinstance(b,int)) #isinstance判断数据类型
+
+#++++++++++++++++++++++华丽丽的分割线+++++++++++++++++++++++++
+class A:
+    pass #pass是啥也不干的意思
+
+class C:
+    b = 'bbb'
+
+class B(A,C): #B继承A,C
+    pass
+
+#在 Python2 中是没有布尔型的，
+# 它用数字 0 表示 False，用 1 表示 True。
+# 到 Python3 中，把 True 和 False 定义成关键字了，
+# 但它们的值还是 1 和 0，它们可以和数字相加。
+var1 = 1
+var2 = 10
+#del语句可以删除单个或多个对象
+del var1
+print(var2)
+
+#数值运算
+3 * 7
+print(2**4)#乘方
+
+# 1、Python可以同时为多个变量赋值，如a, b = 1, 2。
+# 2、一个变量可以通过赋值指向不同类型的对象。
+# 3、数值的除法（/）总是返回一个浮点数，要获取整数使用//操作符。
+# 4、在混合计算时，Python会把整型转换成为浮点数。
+
+e,f =3 ,4
+print(e)
+
+#[]表示list列表 list中的元素可以改变 string不行
+list1 = [a,b]
+#Tuple(元组) 与list相似，但元素不能修改 元组写在小括号（）里
+tuple1 = ('axc',a)
+#比较特殊的是
+tup1 = ()#一个空元组
+tup2 = (20,)#仅包含一个元素时，需要在元素后边添加逗号
+
+#集合Set  使用{}
+set1 = {"Tom",'atom','jiajia'}
+if('jiajia' in set1):
+    print("佳佳在这里")
+
+gege = set('adfghjk')
+didi = set('sdfdsad')
+
+print(gege)
+print(gege-didi)
+# print(gege+didi) 不支持操作
+# print(gege*didi)  不支持操作
+print(gege&didi)
+print(gege ^ didi)
+
+#Dictionary 字典数据类型 类似Java中map 以键值对存储数据
+dict1 = {} #创建一个空的字典
+dict1['one'] = '苟利国家生死以'
+dict1['two'] = '岂因祸福避趋之'
+print(dict1["two"])
+
+#逻辑运算符 not and or 就是直接写
+True and True
+
+#空值，None 不能理解为0，0有意义,类似与Java中的null
+None
+
+#字符串在内存中以unicode表示，若是存储或者网络传输，则把str转化为字节单位的bytes
+x = b'ABC' #py对bytes类型的数据用带b前缀的单引号或双引号表示
+y = 'ABC'
+#注意区分X和Y 前者是bytes的，每个字符都只占一个字节，后者为str
+'ABC'.encode('ascii') #Unicode字符可以通过encode（）方法编码为指定的bytes
+b'ABC'.decode('ascii') #上方法的逆操作，如果bytes中包含无法解码的字节，decode（）会报错
+b'\xe4\xb8\xad\xff'.decode('utf-8', errors='ignore') #如果bytes中只有一小部分无效的字符，可传入errors='ignore'忽略错误的字节
+
+#py占位符展示
+'Hello,%s' %('yy')
+# 字符%s %s可以把任何数据类型转为str
+# %f 浮点数
+# %d 整数
+# %x 十六进制整数
+
+#format方法
+adc = "Hello,{0},成绩提升了{1:.1f}%".format('小明',17.125)
+print(adc)
+
+#input()返回的是string
+
+#for循环
+sum = 0
+for x in [1,2,3,4,5,6,7,8]:
+    sum = sum+x
+print(sum)
+
+#range() range(5)生成的从0到小于5的整数
+print(range(5))
+print(list(range(5)))
+
+count =0
+for x in range(101):
+    count += x
+print(count)
